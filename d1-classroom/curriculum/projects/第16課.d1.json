@@ -1,0 +1,45 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "dog_stand",
+          "next": {
+            "block": {
+              "type": "dog_left",
+              "inputs": {
+                "N": {
+                  "block": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 15
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "dog_stop",
+                  "next": {
+                    "block": {
+                      "type": "dog_lie"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    }
+  },
+  "python": "dog.stand()\ndog.turn_left(degrees=15)\ndog.stop()\ndog.lie()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 16
+}

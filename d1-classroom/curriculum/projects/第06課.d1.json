@@ -1,0 +1,70 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "dog_stand",
+          "next": {
+            "block": {
+              "type": "controls_repeat_ext",
+              "inputs": {
+                "TIMES": {
+                  "block": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 2
+                    }
+                  }
+                },
+                "DO": {
+                  "block": {
+                    "type": "dog_forward",
+                    "inputs": {
+                      "N": {
+                        "block": {
+                          "type": "math_number",
+                          "fields": {
+                            "NUM": 0.5
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "dog_wait",
+                        "inputs": {
+                          "N": {
+                            "block": {
+                              "type": "math_number",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "dog_stop"
+                }
+              }
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    }
+  },
+  "python": "dog.stand()\nfor count in range(2):\n  dog.forward(seconds=0.5)\n  dog.wait(seconds=1)\ndog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 6
+}

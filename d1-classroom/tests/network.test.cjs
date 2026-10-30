@@ -1,0 +1,55 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const net = require('node:net');
+const { spawn } = require('node:child_process');
+const { once } = require('node:events');
+const { scan } = require('../app/discovery.cjs');
+
+test('HTTP + UDP fake bridge: scan, ownership, malformed traffic, timeout, reconnect', { timeout: 15000 }, async t => {
+  const listener = net.createServer();listener.listen(0, '127.0.0.1');await once(listener, 'listening');
+  const port = listener.address().port;await new Promise(resolve => listener.close(resolve));
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'd1-protocol-'));
+  const mac = '02:12:34:56:78:90';
+  const config = path.join(temporary, 'robot.json');
+  fs.writeFileSync(config, JSON.stringify({ mac, bind: '127.0.0.1', port }));
+  const child = spawn(process.env.D1_PYTHON || 'python', [path.resolve(__dirname, '../bridge/bridge.py'), '--config', config, '--fake'], { windowsHide: true, env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' } });
+  t.after(() => { child.kill(); });
+  await new Promise((resolve, reject) => {
+    let output = '';
+    const timeout = setTimeout(() => reject(Error('Fake bridge did not start: ' + output)), 5000);
+    child.on('error', reject);
+    child.on('exit', code => { if (code) { clearTimeout(timeout);reject(Error(output)); } });
+    child.stderr.on('data', data => { output += data; });
+    child.stdout.on('data', data => { output += data;if (output.includes('HTTP+UDP')) { clearTimeout(timeout);resolve(); } });
+  });
+  const post = async (route, body) => {
+    const response = await fetch(`http://127.0.0.1:${port}${route}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    return { status: response.status, body: await response.json() };
+  };
+  const discover = () => scan({ destinations: [{ local: '127.0.0.1', host: '127.0.0.1' }], port, timeoutMs: 120 });
+  assert.equal((await discover())[0].mac, mac);
+  assert.equal((await post('/connect', { expected_mac: '02:00:00:00:00:01' })).status, 409);
+  const first = await post('/connect', { expected_mac: mac });
+  assert.equal(first.status, 200);const lease = first.body.lease;
+  assert(lease.length >= 32);
+  assert.equal((await post('/connect', { expected_mac: mac })).status, 409);
+  assert.equal((await discover())[0].state, 'busy');
+  const bad = await fetch(`http://127.0.0.1:${port}/command`, { method: 'POST', body: '{invalid' });
+  assert.equal(bad.status, 400);
+  assert.equal((await post('/heartbeat', { lease })).status, 200);
+  assert.equal((await post('/command', { lease: 'wrong', action: 'stop' })).status, 409);
+  assert.equal((await post('/begin', { lease })).status, 200);
+  assert.equal((await post('/command', { lease, action: 'stand' })).status, 200);
+  assert.equal((await post('/stop', { lease })).status, 200);
+  assert.equal((await post('/command', { lease, action: 'forward', args: { seconds: 1 } })).status, 409);
+  await new Promise(resolve => setTimeout(resolve, 1400));
+  assert.equal((await discover())[0].state, 'available');
+  const second = await post('/connect', { expected_mac: mac });
+  assert.equal(second.status, 200);assert.notEqual(second.body.lease, lease);
+  assert.equal((await post('/heartbeat', { lease })).status, 409);
+  assert.equal((await post('/heartbeat', { lease: second.body.lease })).status, 200);
+  assert.equal((await post('/release', { lease: second.body.lease })).status, 200);
+});

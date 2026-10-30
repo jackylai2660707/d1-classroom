@@ -1,0 +1,39 @@
+# Installed dependencies and reproducible browser bundles
+**/node_modules/
+d1-classroom/app/renderer.bundle.js
+d1-classroom/app/skulpt.min.js
+d1-classroom/app/skulpt-stdlib.js
+d1-classroom/app/media/
+
+# Generated release packages are attached to the private GitHub Release.
+output/**
+!output/README.md
+tmp/
+downloads/
+d1-classroom/build/qa/
+docs/檔案索引.csv
+
+# Full factory / historic archives are available as a private release asset.
+references/**
+!references/README.md
+
+# Machine-specific settings, actual classroom data and credentials
+**/__pycache__/
+*.py[cod]
+*.previous
+*.log
+*.zip.new
+.env
+.env.*
+!.env.example
+**/robot.json
+**/robots.json
+local/
+field-results/
+student-work/
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

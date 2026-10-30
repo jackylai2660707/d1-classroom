@@ -1,0 +1,65 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "dog_stand",
+          "next": {
+            "block": {
+              "type": "controls_if",
+              "inputs": {
+                "IF0": {
+                  "block": {
+                    "type": "vision_wait",
+                    "fields": {
+                      "LABEL": "左轉卡"
+                    },
+                    "inputs": {
+                      "T": {
+                        "block": {
+                          "type": "math_number",
+                          "fields": {
+                            "NUM": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "DO0": {
+                  "block": {
+                    "type": "dog_left",
+                    "inputs": {
+                      "N": {
+                        "block": {
+                          "type": "math_number",
+                          "fields": {
+                            "NUM": 30
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "dog_stop"
+                }
+              }
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    }
+  },
+  "python": "dog.stand()\nif vision.wait_for(\"左轉卡\", timeout=5):\n  dog.turn_left(degrees=30)\ndog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 15
+}

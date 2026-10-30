@@ -1,0 +1,101 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "variables_set",
+          "fields": {
+            "VAR": {
+              "id": "t"
+            }
+          },
+          "inputs": {
+            "VALUE": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 0.5
+                }
+              }
+            }
+          },
+          "next": {
+            "block": {
+              "type": "dog_stand",
+              "next": {
+                "block": {
+                  "type": "dog_forward",
+                  "inputs": {
+                    "N": {
+                      "block": {
+                        "type": "variables_get",
+                        "fields": {
+                          "VAR": {
+                            "id": "t"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "dog_wait",
+                      "inputs": {
+                        "N": {
+                          "block": {
+                            "type": "math_number",
+                            "fields": {
+                              "NUM": 1
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "dog_forward",
+                          "inputs": {
+                            "N": {
+                              "block": {
+                                "type": "variables_get",
+                                "fields": {
+                                  "VAR": {
+                                    "id": "t"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "dog_stop"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    },
+    "variables": [
+      {
+        "name": "t",
+        "id": "t",
+        "type": ""
+      }
+    ]
+  },
+  "python": "t = None\n\n\nt = 0.5\ndog.stand()\ndog.forward(seconds=t)\ndog.wait(seconds=1)\ndog.forward(seconds=t)\ndog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 7
+}

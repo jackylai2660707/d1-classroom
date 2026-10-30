@@ -1,0 +1,6 @@
+nodeLinker: hoisted
+allowBuilds:
+  electron: true
+  esbuild: true
+  ffmpeg-static: true
+  core-js: false

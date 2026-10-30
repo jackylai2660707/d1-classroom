@@ -1,0 +1,35 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "dog_wait",
+          "inputs": {
+            "N": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 1
+                }
+              }
+            }
+          },
+          "next": {
+            "block": {
+              "type": "dog_stop"
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    }
+  },
+  "python": "dog.wait(seconds=1)\ndog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 2
+}

@@ -1,0 +1,2172 @@
+{
+  "date": "2026-10-20",
+  "workspace": "C:\\Users\\Jackylai\\Downloads\\智元四足机器人D1 Edu二次开发资料v0.2.7(20260801)",
+  "targets": [
+    {
+      "path": "d1-classroom/build/archive-slides",
+      "bytes": 282717,
+      "files": 4,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/archive-slides-crisp",
+      "bytes": 644387,
+      "files": 12,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/archive-slides-final",
+      "bytes": 152503,
+      "files": 3,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/archive-slides-polish",
+      "bytes": 95101,
+      "files": 2,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/archive-slides-v3",
+      "bytes": 867900,
+      "files": 16,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-delivery",
+      "bytes": 817637,
+      "files": 5,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-final-v3",
+      "bytes": 817754,
+      "files": 5,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-render",
+      "bytes": 816429,
+      "files": 5,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/lo-crisp-profile",
+      "bytes": 480208,
+      "files": 112,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/lo-final-profile",
+      "bytes": 480205,
+      "files": 112,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/lo-polish-profile",
+      "bytes": 480169,
+      "files": 112,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/lo-slides-profile",
+      "bytes": 480205,
+      "files": 112,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/package-stage",
+      "bytes": 3199140,
+      "files": 36,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final-v3",
+      "bytes": 1994277,
+      "files": 11,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-render",
+      "bytes": 1977593,
+      "files": 12,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-render-v2",
+      "bytes": 2030793,
+      "files": 11,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides",
+      "bytes": 7777712,
+      "files": 197,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-delivery",
+      "bytes": 14758411,
+      "files": 88,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-delivery-v2",
+      "bytes": 14734334,
+      "files": 87,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final-v3",
+      "bytes": 14861702,
+      "files": 87,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-render",
+      "bytes": 14725392,
+      "files": 89,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-v3",
+      "bytes": 14670932,
+      "files": 88,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-delivery",
+      "bytes": 15396754,
+      "files": 62,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-delivery-v2",
+      "bytes": 15374805,
+      "files": 61,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final-v3",
+      "bytes": 15109845,
+      "files": 61,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-render",
+      "bytes": 15374781,
+      "files": 61,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/unpacked-delivery",
+      "bytes": 414878341,
+      "files": 262,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/test-camera.y4m",
+      "bytes": 36864558,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-1.png",
+      "bytes": 390065,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-10.png",
+      "bytes": 147247,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-11.png",
+      "bytes": 173872,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-12.png",
+      "bytes": 204761,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-13.png",
+      "bytes": 124349,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-14.png",
+      "bytes": 147803,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-15.png",
+      "bytes": 161483,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-16.png",
+      "bytes": 196006,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-17.png",
+      "bytes": 124851,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-18.png",
+      "bytes": 139279,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-19.png",
+      "bytes": 158451,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-2.png",
+      "bytes": 154548,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-20.png",
+      "bytes": 179424,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-21.png",
+      "bytes": 116458,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-22.png",
+      "bytes": 141577,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-23.png",
+      "bytes": 158929,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-24.png",
+      "bytes": 185837,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-25.png",
+      "bytes": 119742,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-26.png",
+      "bytes": 140626,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-27.png",
+      "bytes": 151969,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-28.png",
+      "bytes": 182918,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-29.png",
+      "bytes": 118838,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-3.png",
+      "bytes": 217788,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-30.png",
+      "bytes": 133656,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-31.png",
+      "bytes": 152798,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-32.png",
+      "bytes": 230400,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-33.png",
+      "bytes": 110067,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-34.png",
+      "bytes": 135504,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-35.png",
+      "bytes": 155144,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-36.png",
+      "bytes": 236255,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-37.png",
+      "bytes": 118000,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-38.png",
+      "bytes": 129532,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-39.png",
+      "bytes": 165462,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-4.png",
+      "bytes": 222533,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-40.png",
+      "bytes": 212881,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-41.png",
+      "bytes": 108900,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-42.png",
+      "bytes": 143252,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-43.png",
+      "bytes": 163009,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-44.png",
+      "bytes": 226106,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-45.png",
+      "bytes": 118959,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-46.png",
+      "bytes": 137777,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-47.png",
+      "bytes": 161427,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-48.png",
+      "bytes": 218664,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-49.png",
+      "bytes": 147230,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-5.png",
+      "bytes": 235495,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-50.png",
+      "bytes": 86960,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-51.png",
+      "bytes": 128196,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-52.png",
+      "bytes": 134097,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-53.png",
+      "bytes": 166853,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-54.png",
+      "bytes": 265237,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-55.png",
+      "bytes": 188903,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-56.png",
+      "bytes": 221421,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-57.png",
+      "bytes": 130849,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-58.png",
+      "bytes": 139437,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-59.png",
+      "bytes": 164186,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-6.png",
+      "bytes": 142241,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-60.png",
+      "bytes": 245194,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-61.png",
+      "bytes": 91043,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-62.png",
+      "bytes": 81172,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-63.png",
+      "bytes": 122761,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-64.png",
+      "bytes": 146347,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-65.png",
+      "bytes": 158792,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-66.png",
+      "bytes": 237960,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-67.png",
+      "bytes": 236905,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-68.png",
+      "bytes": 86404,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-69.png",
+      "bytes": 116936,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-7.png",
+      "bytes": 171960,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-70.png",
+      "bytes": 139046,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-71.png",
+      "bytes": 171862,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-72.png",
+      "bytes": 236695,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-73.png",
+      "bytes": 134837,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-74.png",
+      "bytes": 89891,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-75.png",
+      "bytes": 129460,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-76.png",
+      "bytes": 147883,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-77.png",
+      "bytes": 160295,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-78.png",
+      "bytes": 189783,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-79.png",
+      "bytes": 122883,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-8.png",
+      "bytes": 326297,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-80.png",
+      "bytes": 141487,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-81.png",
+      "bytes": 176029,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-82.png",
+      "bytes": 222051,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-83.png",
+      "bytes": 78913,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-84.png",
+      "bytes": 104189,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-85.png",
+      "bytes": 156199,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-86.png",
+      "bytes": 200629,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-87.png",
+      "bytes": 200339,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/student-final/page-9.png",
+      "bytes": 125286,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-1.png",
+      "bytes": 393674,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-10.png",
+      "bytes": 234203,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-11.png",
+      "bytes": 282661,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-12.png",
+      "bytes": 264937,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-13.png",
+      "bytes": 225023,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-14.png",
+      "bytes": 289850,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-15.png",
+      "bytes": 265159,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-16.png",
+      "bytes": 219237,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-17.png",
+      "bytes": 270226,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-18.png",
+      "bytes": 258915,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-19.png",
+      "bytes": 220714,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-2.png",
+      "bytes": 154548,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-20.png",
+      "bytes": 270106,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-21.png",
+      "bytes": 256432,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-22.png",
+      "bytes": 217350,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-23.png",
+      "bytes": 263125,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-24.png",
+      "bytes": 241674,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-25.png",
+      "bytes": 217632,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-26.png",
+      "bytes": 270351,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-27.png",
+      "bytes": 240776,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-28.png",
+      "bytes": 223905,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-29.png",
+      "bytes": 267132,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-3.png",
+      "bytes": 217788,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-30.png",
+      "bytes": 233409,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-31.png",
+      "bytes": 228502,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-32.png",
+      "bytes": 274908,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-33.png",
+      "bytes": 256690,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-34.png",
+      "bytes": 228022,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-35.png",
+      "bytes": 272691,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-36.png",
+      "bytes": 240360,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-37.png",
+      "bytes": 236914,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-38.png",
+      "bytes": 291709,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-39.png",
+      "bytes": 246447,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-4.png",
+      "bytes": 222533,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-40.png",
+      "bytes": 239558,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-41.png",
+      "bytes": 299318,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-42.png",
+      "bytes": 257772,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-43.png",
+      "bytes": 244296,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-44.png",
+      "bytes": 283213,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-45.png",
+      "bytes": 261076,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-46.png",
+      "bytes": 231549,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-47.png",
+      "bytes": 283745,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-48.png",
+      "bytes": 257273,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-49.png",
+      "bytes": 246716,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-5.png",
+      "bytes": 235495,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-50.png",
+      "bytes": 298908,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-51.png",
+      "bytes": 267916,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-52.png",
+      "bytes": 234320,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-53.png",
+      "bytes": 283453,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-54.png",
+      "bytes": 276611,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-55.png",
+      "bytes": 175874,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-56.png",
+      "bytes": 221891,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-57.png",
+      "bytes": 78295,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-58.png",
+      "bytes": 104234,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-59.png",
+      "bytes": 156059,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-6.png",
+      "bytes": 206520,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-60.png",
+      "bytes": 200464,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-7.png",
+      "bytes": 234717,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-8.png",
+      "bytes": 288934,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/teacher-final/page-9.png",
+      "bytes": 260448,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-1.png",
+      "bytes": 160840,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-10.png",
+      "bytes": 138615,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-11.png",
+      "bytes": 138182,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-2.png",
+      "bytes": 195547,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-3.png",
+      "bytes": 124737,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-4.png",
+      "bytes": 138592,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-5.png",
+      "bytes": 166326,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-6.png",
+      "bytes": 265201,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-7.png",
+      "bytes": 188492,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-8.png",
+      "bytes": 221120,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/sample-final/page-9.png",
+      "bytes": 130758,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-final/page-1.png",
+      "bytes": 161634,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-final/page-2.png",
+      "bytes": 246701,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-final/page-3.png",
+      "bytes": 120331,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/cards-final/page-4.png",
+      "bytes": 110210,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-1.png",
+      "bytes": 359935,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-2.png",
+      "bytes": 193551,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-3.png",
+      "bytes": 169989,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-4.png",
+      "bytes": 148128,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-5.png",
+      "bytes": 196689,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-6.png",
+      "bytes": 196874,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-7.png",
+      "bytes": 196751,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/pilot-final/page-8.png",
+      "bytes": 41572,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-1",
+      "bytes": 601222,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-10",
+      "bytes": 475457,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-11",
+      "bytes": 484025,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-12",
+      "bytes": 513427,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-13",
+      "bytes": 465598,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-14",
+      "bytes": 478460,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-15",
+      "bytes": 504553,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-16",
+      "bytes": 477473,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-2",
+      "bytes": 482615,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-3",
+      "bytes": 505298,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-4",
+      "bytes": 480568,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-5",
+      "bytes": 473026,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-6",
+      "bytes": 473747,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-7",
+      "bytes": 467468,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-8",
+      "bytes": 472999,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native/lesson-9",
+      "bytes": 481394,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-10",
+      "bytes": 484160,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-11",
+      "bytes": 485581,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-12",
+      "bytes": 525904,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-13",
+      "bytes": 480459,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-2",
+      "bytes": 499996,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-3",
+      "bytes": 493187,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-4",
+      "bytes": 474265,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-5",
+      "bytes": 467446,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-6",
+      "bytes": 466475,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-7",
+      "bytes": 459949,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-8",
+      "bytes": 467163,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-crisp/lesson-9",
+      "bytes": 469140,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-polish/lesson-13",
+      "bytes": 480679,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/slides-native-polish/lesson-2",
+      "bytes": 499987,
+      "files": 7,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/cards-001.jpg",
+      "bytes": 697871,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-02-1.jpg",
+      "bytes": 350529,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-02-2.jpg",
+      "bytes": 272694,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-03-1.jpg",
+      "bytes": 365092,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-03-2.jpg",
+      "bytes": 276872,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-04-1.jpg",
+      "bytes": 342454,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-04-2.jpg",
+      "bytes": 267242,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-05-1.jpg",
+      "bytes": 339692,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-05-2.jpg",
+      "bytes": 262042,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-06-1.jpg",
+      "bytes": 340928,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-06-2.jpg",
+      "bytes": 254293,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-07-1.jpg",
+      "bytes": 339222,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-07-2.jpg",
+      "bytes": 248539,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-08-1.jpg",
+      "bytes": 353056,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-08-2.jpg",
+      "bytes": 249497,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-09-1.jpg",
+      "bytes": 343067,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-09-2.jpg",
+      "bytes": 254719,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-10-1.jpg",
+      "bytes": 350538,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-10-2.jpg",
+      "bytes": 261848,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-11-1.jpg",
+      "bytes": 364267,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-11-2.jpg",
+      "bytes": 270993,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-12-1.jpg",
+      "bytes": 369651,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-12-2.jpg",
+      "bytes": 277560,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-13-1.jpg",
+      "bytes": 355865,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/crisp-13-2.jpg",
+      "bytes": 262157,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-01-1.jpg",
+      "bytes": 410062,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-01-2.jpg",
+      "bytes": 284749,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-02-1.jpg",
+      "bytes": 363186,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-02-2.jpg",
+      "bytes": 286067,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-03-1.jpg",
+      "bytes": 388303,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-03-2.jpg",
+      "bytes": 290090,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-04-1.jpg",
+      "bytes": 367844,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-04-2.jpg",
+      "bytes": 280088,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-05-1.jpg",
+      "bytes": 363883,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-05-2.jpg",
+      "bytes": 275229,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-06-1.jpg",
+      "bytes": 363559,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-06-2.jpg",
+      "bytes": 267300,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-07-1.jpg",
+      "bytes": 362099,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-07-2.jpg",
+      "bytes": 259957,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-08-1.jpg",
+      "bytes": 375475,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-08-2.jpg",
+      "bytes": 259292,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-09-1.jpg",
+      "bytes": 362964,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-09-2.jpg",
+      "bytes": 266585,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-10-1.jpg",
+      "bytes": 365941,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-10-2.jpg",
+      "bytes": 273634,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-11-1.jpg",
+      "bytes": 354805,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-11-2.jpg",
+      "bytes": 270993,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-12-1.jpg",
+      "bytes": 390844,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-12-2.jpg",
+      "bytes": 291331,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-13-1.jpg",
+      "bytes": 383627,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-13-2.jpg",
+      "bytes": 273709,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-14-1.jpg",
+      "bytes": 389090,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-14-2.jpg",
+      "bytes": 266608,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-15-1.jpg",
+      "bytes": 360952,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-15-2.jpg",
+      "bytes": 269428,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-16-1.jpg",
+      "bytes": 355069,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/native-16-2.jpg",
+      "bytes": 268891,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/pilot-001.jpg",
+      "bytes": 1016788,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/pilot-005.jpg",
+      "bytes": 372480,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/sample-001.jpg",
+      "bytes": 729864,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/sample-005.jpg",
+      "bytes": 778850,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/sample-009.jpg",
+      "bytes": 432913,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-01-1.jpg",
+      "bytes": 251881,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-01-2.jpg",
+      "bytes": 178285,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-02-1.jpg",
+      "bytes": 232219,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-02-2.jpg",
+      "bytes": 178804,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-03-1.jpg",
+      "bytes": 239349,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-03-2.jpg",
+      "bytes": 180763,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-04-1.jpg",
+      "bytes": 227936,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-04-2.jpg",
+      "bytes": 175094,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-05-1.jpg",
+      "bytes": 225358,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-05-2.jpg",
+      "bytes": 171480,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-06-1.jpg",
+      "bytes": 224624,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-06-2.jpg",
+      "bytes": 166023,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-07-1.jpg",
+      "bytes": 223714,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-07-2.jpg",
+      "bytes": 162507,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-08-1.jpg",
+      "bytes": 234061,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-08-2.jpg",
+      "bytes": 162941,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-09-1.jpg",
+      "bytes": 227730,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-09-2.jpg",
+      "bytes": 166636,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-10-1.jpg",
+      "bytes": 231933,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-10-2.jpg",
+      "bytes": 171514,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-11-1.jpg",
+      "bytes": 238516,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-11-2.jpg",
+      "bytes": 177135,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-12-1.jpg",
+      "bytes": 241007,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-12-2.jpg",
+      "bytes": 182501,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-13-1.jpg",
+      "bytes": 234773,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-13-2.jpg",
+      "bytes": 171774,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-14-1.jpg",
+      "bytes": 237588,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-14-2.jpg",
+      "bytes": 166701,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-15-1.jpg",
+      "bytes": 240349,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-15-2.jpg",
+      "bytes": 175762,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-16-1.jpg",
+      "bytes": 233562,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/slides-16-2.jpg",
+      "bytes": 175261,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-001.jpg",
+      "bytes": 875080,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-005.jpg",
+      "bytes": 854364,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-009.jpg",
+      "bytes": 731706,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-013.jpg",
+      "bytes": 730616,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-017.jpg",
+      "bytes": 704470,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-021.jpg",
+      "bytes": 700443,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-025.jpg",
+      "bytes": 694548,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-029.jpg",
+      "bytes": 680892,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-033.jpg",
+      "bytes": 683002,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-037.jpg",
+      "bytes": 699675,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-041.jpg",
+      "bytes": 710704,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-045.jpg",
+      "bytes": 748225,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-049.jpg",
+      "bytes": 644368,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-053.jpg",
+      "bytes": 781062,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-057.jpg",
+      "bytes": 768904,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-061.jpg",
+      "bytes": 616211,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-065.jpg",
+      "bytes": 713857,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-069.jpg",
+      "bytes": 756901,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-073.jpg",
+      "bytes": 646194,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-077.jpg",
+      "bytes": 721521,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-081.jpg",
+      "bytes": 739578,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/student-085.jpg",
+      "bytes": 526375,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-001.jpg",
+      "bytes": 877462,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-005.jpg",
+      "bytes": 1054608,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-009.jpg",
+      "bytes": 1084429,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-013.jpg",
+      "bytes": 1064906,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-017.jpg",
+      "bytes": 1084488,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-021.jpg",
+      "bytes": 1028539,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-025.jpg",
+      "bytes": 1012207,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-029.jpg",
+      "bytes": 1058844,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-033.jpg",
+      "bytes": 1041990,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-037.jpg",
+      "bytes": 1087739,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-041.jpg",
+      "bytes": 1156138,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-045.jpg",
+      "bytes": 1086844,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-049.jpg",
+      "bytes": 1106031,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-053.jpg",
+      "bytes": 1035533,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/qa/teacher-057.jpg",
+      "bytes": 726319,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/build/__pycache__",
+      "bytes": 48373,
+      "files": 1,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    },
+    {
+      "path": "d1-classroom/bridge/__pycache__",
+      "bytes": 32657,
+      "files": 2,
+      "reason": "可重建的預覽、舊版輸出、暫存或驗收副本"
+    }
+  ]
+}

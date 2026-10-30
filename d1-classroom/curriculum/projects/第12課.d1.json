@@ -1,0 +1,20 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "dog_stop",
+          "x": 40,
+          "y": 38
+        }
+      ]
+    }
+  },
+  "python": "dog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 12
+}

@@ -1,0 +1,21 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.zip -text
+*.pdf -text
+*.png -text
+*.jpg -text
+*.ttf -text
+*.ttc -text
+# Installer compares the vendor license byte-for-byte with the original ZIP.
+d1-classroom/bridge/sdk/LICENSE.vendor.txt -text

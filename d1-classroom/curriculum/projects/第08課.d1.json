@@ -1,0 +1,120 @@
+{
+  "format": "d1-classroom",
+  "version": 1,
+  "blocks": {
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {
+          "type": "variables_set",
+          "fields": {
+            "VAR": {
+              "id": "n"
+            }
+          },
+          "inputs": {
+            "VALUE": {
+              "block": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 1
+                }
+              }
+            }
+          },
+          "next": {
+            "block": {
+              "type": "dog_stand",
+              "next": {
+                "block": {
+                  "type": "controls_if",
+                  "extraState": {
+                    "hasElse": true
+                  },
+                  "inputs": {
+                    "IF0": {
+                      "block": {
+                        "type": "logic_compare",
+                        "fields": {
+                          "OP": "EQ"
+                        },
+                        "inputs": {
+                          "A": {
+                            "block": {
+                              "type": "variables_get",
+                              "fields": {
+                                "VAR": {
+                                  "id": "n"
+                                }
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "math_number",
+                              "fields": {
+                                "NUM": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "DO0": {
+                      "block": {
+                        "type": "dog_left",
+                        "inputs": {
+                          "N": {
+                            "block": {
+                              "type": "math_number",
+                              "fields": {
+                                "NUM": 15
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "ELSE": {
+                      "block": {
+                        "type": "dog_right",
+                        "inputs": {
+                          "N": {
+                            "block": {
+                              "type": "math_number",
+                              "fields": {
+                                "NUM": 15
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "dog_stop"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": 40,
+          "y": 38
+        }
+      ]
+    },
+    "variables": [
+      {
+        "name": "n",
+        "id": "n",
+        "type": ""
+      }
+    ]
+  },
+  "python": "n = None\n\n\nn = 1\ndog.stand()\nif n == 1:\n  dog.turn_left(degrees=15)\nelse:\n  dog.turn_right(degrees=15)\ndog.stop()\n",
+  "edited": false,
+  "mode": "blocks",
+  "lesson": 8
+}

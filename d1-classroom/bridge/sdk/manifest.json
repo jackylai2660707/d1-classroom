@@ -1,0 +1,12 @@
+{
+  "archive": "agibot_D1_Edu-Ultra_V2.0.7.zip",
+  "version": "2.0.7",
+  "sha256": "22efb7ff19fc345c2c9943a47fb19088d03b6fc1b638877fd9b010ba7b80dca2",
+  "root": "agibot_D1_Edu-Ultra",
+  "model": "zsl-1",
+  "python": "CPython 3.10",
+  "architectures": [
+    "aarch64",
+    "x86_64"
+  ]
+}

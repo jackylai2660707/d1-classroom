@@ -1,0 +1,52 @@
+{
+  "name": "d1-classroom",
+  "version": "2.0.0",
+  "private": true,
+  "description": "D1 初中學生編程工具",
+  "main": "app/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "bundle": "node build/bundle.cjs",
+    "package": "node build/package.cjs",
+    "test:app": "node tests/app-smoke.cjs",
+    "curriculum": "node curriculum/build-content.cjs",
+    "courseware": "python build/courseware.py",
+    "test:courseware": "node tests/courseware-smoke.cjs"
+  },
+  "dependencies": {
+    "blockly": "11.2.2",
+    "@tensorflow/tfjs": "4.22.0",
+    "jszip": "3.10.1",
+    "skulpt": "1.2.0",
+    "ffmpeg-static": "5.2.0"
+  },
+  "devDependencies": {
+    "electron": "38.2.0",
+    "@electron/asar": "3.4.1",
+    "esbuild": "0.25.10"
+  },
+  "build": {
+    "appId": "edu.d1.classroom",
+    "productName": "D1 學生工坊",
+    "directories": {
+      "output": "../output/D1彩色課程套件/學生工具"
+    },
+    "files": [
+      "app/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "node_modules/ffmpeg-static/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      }
+    ],
+    "win": {
+      "target": "dir",
+      "signAndEditExecutable": false
+    }
+  },
+  "packageManager": "pnpm@11.0.9"
+}
