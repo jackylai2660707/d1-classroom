@@ -17,4 +17,5 @@
 
 - 私人 GitHub 倉庫為 jackylai2660707/d1-classroom。Git 追蹤原始碼、bridge/sdk 與文檔；成品 / 大型歷史資料透過同倉庫私人 Release 交付，不用 Git LFS。
 - 公司接手先讀 docs/公司電腦實機測試.md。下載腳本 scripts/fetch-release.ps1 按 releases/v2.0.0.json 核對 SHA-256；現場記錄保存在忽略的 field-results/。
+- 跨電腦繼續開發先讀 docs/跨電腦持續開發.md。scripts/setup-dev.ps1 安裝鎖定的開發依賴；pnpm run dev / dev:debug 以目前原始碼啟動，不使用舊 Release EXE。
 - 不覆寫已發佈的 Release 標籤或 manifest；新成品需新版本與新清單。推送前執行 scripts/check_repository.py 及核心測試。

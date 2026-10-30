@@ -1,8 +1,12 @@
 # D1 機器狗實驗室 2.0
 
-**公司電腦接手：先看 [公司電腦實機測試](docs/公司電腦實機測試.md)。**
+**公司電腦繼續開發：先看 [跨電腦持續開發](docs/跨電腦持續開發.md)。實機部署按 [公司電腦實機測試](docs/公司電腦實機測試.md)。**
 
 私人倉庫：[jackylai2660707/d1-classroom](https://github.com/jackylai2660707/d1-classroom)。Git 保存可維護原始碼、完整原廠 SDK 與文檔；Windows 成品及大型參考資料放同一私人倉庫的 Release。
+
+開發版：clone 後在倉庫根目錄執行 `powershell -NoProfile -File scripts/setup-dev.ps1`，再進 `d1-classroom` 執行 `pnpm run dev`。可修改 UI、功能與橋接、連真機 debug，再以正常 Git 分支 commit / push；不需要使用預先打包的 EXE。
+
+以下是取得固定 Release 成品的流程，供比對與現場驗收基準使用：
 
 ```powershell
 gh auth login

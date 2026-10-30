@@ -21,3 +21,5 @@ jobs:
         run: node --test d1-classroom/tests/*.test.cjs
       - name: Python bridge and installer
         run: python -m unittest discover -s d1-classroom/tests -p '*_test.py'
+      - name: Release version immutability
+        run: python scripts/test_prepare_release.py

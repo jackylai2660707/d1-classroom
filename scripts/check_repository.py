@@ -13,6 +13,7 @@ SECRET_PATTERNS=[re.compile(rb'gh[pousr]_[A-Za-z0-9]{30,}'),
                  re.compile(rb'AKIA[0-9A-Z]{16}')]
 IGNORED_PREFIXES=('output/','tmp/','downloads/','field-results/','student-work/','local/')
 REQUIRED=['README.md','AGENTS.md','.gitignore','.gitattributes','docs/公司電腦實機測試.md',
+          'docs/跨電腦持續開發.md','scripts/setup-dev.ps1',
           'docs/實機測試記錄範本.md','scripts/fetch-release.ps1','scripts/preflight.ps1',
           'releases/v2.0.0.json','d1-classroom/curriculum/lessons.json','d1-classroom/bridge/install.sh']
 

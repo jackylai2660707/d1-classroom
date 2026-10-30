@@ -4,7 +4,8 @@ import csv
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / 'docs' / '檔案索引.csv'
-EXCLUDED = {'node_modules', '__pycache__', '.git'}
+EXCLUDED = {'node_modules', '__pycache__', '.git', '.venv', 'venv',
+            'local', 'tmp', 'downloads', 'field-results', '.previous-releases'}
 
 
 def category(parts):

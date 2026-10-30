@@ -6,6 +6,8 @@
   "main": "app/main.cjs",
   "scripts": {
     "start": "electron .",
+    "dev": "node build/bundle.cjs && electron .",
+    "dev:debug": "node build/bundle.cjs && electron --inspect=127.0.0.1:9229 .",
     "test": "node --test tests/*.test.cjs",
     "bundle": "node build/bundle.cjs",
     "package": "node build/package.cjs",

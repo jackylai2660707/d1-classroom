@@ -1,5 +1,7 @@
 # D1 機器狗實驗室 2.0 原始碼
 
+繼續開發先看 [跨電腦持續開發](../docs/跨電腦持續開發.md)。在倉庫根目錄跑 `scripts/setup-dev.ps1`，再於本目錄執行 `pnpm run dev`，即可用目前原始碼修改功能 / UI 並連真機。`pnpm run dev:debug` 加上僅限本機的主程序 inspector；renderer 用 Ctrl+Shift+I。
+
 Git clone 後，從倉庫根目錄執行 scripts/fetch-release.ps1 取得私人 Release 成品；完整接手步驟見 ../docs/公司電腦實機測試.md。正式使用從完整套件的「使用說明.html」開始。學生不需要安裝 Node.js、Python 或 SDK。
 
 ## 修改與重建
@@ -63,6 +65,6 @@ SDK 原包、授權與雜湊位於 bridge/sdk。程式、模型與相機解碼�
 ## 完整 Git 倉庫的發佈與接手
 
 - 根目錄 scripts/test.ps1 跑核心；scripts/check_repository.py 檢查 Git index 的必要文件、敏感檔名、憑證特徵、LF 與大型檔。
-- scripts/prepare-release.py 在重建完整交付後準備三個 Release ZIP 與 releases/v2.0.0.json；Release 標籤不可隨意覆寫，新版應換標籤和清單。
+- scripts/prepare-release.py --version 新版本 在重建完整交付後準備新 Release ZIP 與新的版本清單；已存在的 manifest 拒絕覆寫。v2.0.0 保持原狀。
 - build/qa/ 是本機驗證結果；正式歷史證據摘要在 docs/，現場公司資料另存 field-results/。
 - 工作區以外的絕對作者路徑已從目前建置入口移除。Windows PDF 字型的預設路徑可用環境變數覆寫。
