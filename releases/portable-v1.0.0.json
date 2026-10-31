@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "repository": "jackylai2660707/d1-classroom",
+  "product": "robot-initializer-portable",
+  "tag": "portable-v1.0.0",
+  "version": "1.0.0",
+  "preparedDate": "2026-10-31",
+  "assets": [
+    {
+      "role": "initializer",
+      "name": "D1-Robot-Initializer-Portable-1.0.0-Windows-x64.zip",
+      "bytes": 44465515,
+      "sha256": "3264ce51e8107538901af89d2665920a7d025da1a52d037be921095b9f488320"
+    },
+    {
+      "role": "guide",
+      "name": "README.txt",
+      "bytes": 2666,
+      "sha256": "dd358fe5f1d7d11fcc512e880de1536896b714b8a08ecd8de2735b261d5d5112"
+    }
+  ]
+}

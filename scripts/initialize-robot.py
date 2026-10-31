@@ -43,7 +43,8 @@ def execute(args, data=None, timeout=20, check=True):
 
 
 def executable(name):
-    found = shutil.which(name)
+    bundled = ROOT/'runtime'/'putty'/'plink.exe'
+    found = str(bundled) if name=='plink' and bundled.is_file() else shutil.which(name)
     if not found and name == 'plink' and os.name == 'nt':
         candidate = pathlib.Path(os.environ.get('ProgramFiles', r'C:\Program Files'))/'PuTTY'/'plink.exe'
         if candidate.is_file():
@@ -63,6 +64,18 @@ def fingerprint(ip, keyscan):
             keys.add('SHA256:' + base64.b64encode(hashlib.sha256(blob).digest()).decode().rstrip('='))
     if len(keys) != 1:
         raise ValueError('無法唯一取得 SSH 主機金鑰，請檢查 IP、電源與局域網；未嘗試登入')
+    return keys.pop()
+
+
+def plink_fingerprint(ip, plink):
+    # Deliberately supply no password and do not accept a host key here.
+    # Verbose handshake output contains the server's ED25519 fingerprint.
+    result = execute([plink, '-batch', '-ssh', '-4', '-T', '-noagent', '-noshare',
+                      '-v', '-l', DEFAULT_USER, ip, 'exit'], timeout=12, check=False)
+    output = (result.stdout + b'\n' + result.stderr).decode('utf-8', errors='replace')
+    keys = set(re.findall(r'ssh-ed25519\s+\d+\s+(SHA256:[A-Za-z0-9+/]{43})(?=\s|$)', output))
+    if len(keys) != 1:
+        raise ValueError('無法從內附 SSH 工具唯一取得 ED25519 主機指紋，未嘗試密碼登入')
     return keys.pop()
 
 
@@ -156,17 +169,22 @@ def main():
     parser.add_argument('ip', nargs='?')
     parser.add_argument('--check-only', action='store_true', help='只讀檢查，不上傳或安裝')
     parser.add_argument('--prepare-only', action='store_true', help='只在本機建立並核對初始化包，不連機器狗')
+    parser.add_argument('--portable-self-test', action='store_true', help='只檢查內附 runtime、SDK 及 ZIP，不連機器狗')
     args = parser.parse_args()
     archive, sha = make_package()
+    if args.portable_self_test:
+        verify_portable()
+        return
     if args.prepare_only:
         print('初始化包：' + str(archive));print('SHA-256：' + sha);return
     print('請先讓狗趴穩、停止程式並斷開學生工坊；現場備妥硬體停止方式。')
     print('此流程可能接管 SDK、重啟原廠運控；不測動作、不改 Wi-Fi、不新增開機自啟。')
     ip = address(args.ip or input('新機器狗 IPv4：'))
-    plink, keyscan = executable('plink'), executable('ssh-keyscan')
+    plink = executable('plink')
     if '-pwfile' not in execute([plink, '--help']).stdout.decode(errors='replace'):
         raise ValueError('PuTTY Plink 版本不支援安全的密碼檔登入')
-    key = fingerprint(ip, keyscan)
+    keyscan = None if (ROOT/'runtime/putty/plink.exe').is_file() else shutil.which('ssh-keyscan')
+    key = fingerprint(ip, keyscan) if keyscan else plink_fingerprint(ip, plink)
     print('SSH 指紋：' + key)
     # Factory credentials are supplied by the operator; never save them in results or argv.
     password = os.environ.get('D1_SSH_PASSWORD', 'firefly')
@@ -216,10 +234,32 @@ def main():
         print('本機記錄：' + str(report_path))
 
 
+def verify_portable():
+    manifest_path = ROOT/'PORTABLE-MANIFEST.json'
+    if not manifest_path.is_file():
+        raise ValueError('這不是完整 portable 目錄，缺少 manifest')
+    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+    for entry in manifest['files']:
+        path = (ROOT/entry['path']).resolve()
+        if not path.is_relative_to(ROOT.resolve()) or not path.is_file():
+            raise ValueError('Portable 檔案路徑缺失或越界')
+        if hashlib.sha256(path.read_bytes()).hexdigest() != entry['sha256']:
+            raise ValueError('Portable 檔案損壞：' + entry['path'])
+    plink = ROOT/'runtime/putty/plink.exe'
+    output = execute([str(plink), '--help']).stdout.decode(errors='replace')
+    if '-pwfile' not in output:
+        raise ValueError('內附 SSH 工具不可用')
+    for name in ('ssl', 'hashlib', 'zipfile', 'socket', 'subprocess'):
+        __import__(name)
+    print('PORTABLE SELF-TEST PASS: runtime, SSH, SDK and manifest verified. No robot connection attempted.')
+
+
 if __name__ == '__main__':
     try:
         if hasattr(sys.stdout, 'reconfigure'):
             sys.stdout.reconfigure(encoding='utf-8')
+        if (ROOT/'PORTABLE-MANIFEST.json').is_file() and '--portable-self-test' not in sys.argv:
+            verify_portable()
         main()
     except (Exception, KeyboardInterrupt) as error:
         print('初始化未完成：' + str(error), file=sys.stderr)

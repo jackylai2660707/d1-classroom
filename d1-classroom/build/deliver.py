@@ -120,7 +120,8 @@ def main():
     setup=O.parent/'D1機器狗初始化包.zip'
     setup_entries=[(R/'bridge'/name,'d1-setup/'+name) for name in ['bridge.py','highlevel.py','provision.py','install.py','install.sh']]
     setup_entries += [(p,'d1-setup/sdk/'+p.name) for p in sorted(sdk.iterdir()) if p.is_file()]
-    setup_entries += [(R/'技術部署與實機驗收.md','d1-setup/'+name) for name in ['README.md','README.txt']]
+    setup_entries += [(R/'bridge/README.setup.txt','d1-setup/'+name) for name in ['README.md','README.txt']]
+    setup_entries += [(R/'技術部署與實機驗收.md','d1-setup/技術部署與實機驗收.md')]
     setup_entries += [(R/'LICENSE','d1-setup/LICENSE')]
     write_zip(setup,setup_entries);copy(setup,O/'技術人員部署/d1-setup.zip')
     source=O/'D1學生工坊與教材原始碼.zip'

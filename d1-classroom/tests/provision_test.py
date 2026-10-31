@@ -54,6 +54,33 @@ class PCSetupTests(unittest.TestCase):
         with patch.object(pc, 'execute', return_value=SimpleNamespace(stdout=line + other)):
             with self.assertRaises(ValueError): pc.fingerprint('192.168.5.22', 'ssh-keyscan')
 
+    def test_portable_plink_fingerprint_without_password_or_hostkey_acceptance(self):
+        key = 'SHA256:' + 'A' * 43
+        output = ('Host key fingerprint is:\nssh-ed25519 255 ' + key + '\nConnection abandoned.').encode()
+        with patch.object(pc, 'execute', return_value=SimpleNamespace(stdout=b'', stderr=output)) as run:
+            self.assertEqual(pc.plink_fingerprint('192.168.5.22', 'portable/plink.exe'), key)
+            args = run.call_args.args[0]
+            self.assertNotIn('-pwfile', args)
+            self.assertNotIn('-hostkey', args)
+            self.assertIn('-batch', args)
+        with patch.object(pc, 'execute', return_value=SimpleNamespace(stdout=b'', stderr=b'Network timeout')):
+            with self.assertRaises(ValueError): pc.plink_fingerprint('192.168.5.22', 'plink')
+
+    def test_portable_hash_failure_prevents_tool_execution(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(pc, 'ROOT', Path(directory)):
+            root = Path(directory)
+            (root/'runtime').mkdir()
+            (root/'runtime/test.bin').write_bytes(b'altered')
+            (root/'PORTABLE-MANIFEST.json').write_text(json.dumps({'files': [{'path': 'runtime/test.bin', 'sha256': hashlib.sha256(b'original').hexdigest()}]}))
+            with patch.object(pc, 'execute') as execute:
+                with self.assertRaisesRegex(ValueError, '損壞'): pc.verify_portable()
+                execute.assert_not_called()
+
+    def test_portable_rejects_manifest_path_outside_root(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(pc, 'ROOT', Path(directory)):
+            (Path(directory)/'PORTABLE-MANIFEST.json').write_text(json.dumps({'files': [{'path': '../outside.bin', 'sha256': 'bad'}]}))
+            with self.assertRaisesRegex(ValueError, '越界'): pc.verify_portable()
+
     def test_known_mac_key_change_is_not_silently_accepted(self):
         with tempfile.TemporaryDirectory() as directory:
             registry = Path(directory)/'hosts.json'
