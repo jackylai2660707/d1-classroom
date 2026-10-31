@@ -8,10 +8,13 @@ import zipfile
 import subprocess
 import os
 from unittest.mock import patch
+from contextlib import ExitStack
+from types import SimpleNamespace
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]/'bridge'))
 from install import wifi_interface, sdk_directory, write_changed, service_text, extract_bundled_sdk, install_bundled_sdk, BUNDLE
 from bridge import read_mac
+import install
 
 
 class InstallerTests(unittest.TestCase):
@@ -37,6 +40,9 @@ class InstallerTests(unittest.TestCase):
                 self.assertEqual(len(list(destination.glob('*.so'))), 2)
                 for binary in destination.glob('*.so'):
                     self.assertEqual(binary.read_bytes()[:4], b'\x7fELF')
+                    if binary.name.startswith('mc_sdk_'):
+                        self.assertIn(b'\0checkConnect\0', binary.read_bytes())
+                        self.assertNotIn(b'\0checkConnection\0', binary.read_bytes())
                 self.assertEqual((destination/'LICENSE.vendor.txt').read_bytes(), (BUNDLE/'LICENSE.vendor.txt').read_bytes())
 
     def test_corrupt_sdk_refused_before_destination_is_created(self):
@@ -133,6 +139,49 @@ class InstallerTests(unittest.TestCase):
         self.assertIn('ExecStart="/usr/bin/python3.10"', unit)
         self.assertIn('Restart=on-failure', unit)
         with self.assertRaises(ValueError): service_text('/usr/bin/python\nExecStart=bad', '/opt/sdk', 'root')
+
+    def test_no_start_writes_files_without_activation_or_robot_initialization(self):
+        with tempfile.TemporaryDirectory() as temporary, ExitStack() as stack:
+            root = pathlib.Path(temporary)
+            target = root/'opt'
+            unit = root/'systemd/d1-classroom.service'
+            stack.enter_context(patch('install.ROOT', target))
+            stack.enter_context(patch('install.UNIT', unit))
+            stack.enter_context(patch('sys.argv', ['install.py', '--no-start', '--user', 'firefly']))
+            stack.enter_context(patch('install.sys.platform', 'linux'))
+            stack.enter_context(patch('install.sys.version_info', (3, 10, 12)))
+            stack.enter_context(patch('install.os.geteuid', return_value=0, create=True))
+            stack.enter_context(patch.dict(sys.modules, {'pwd': SimpleNamespace(getpwnam=lambda _: None)}))
+            stack.enter_context(patch('install.shutil.which', return_value='/usr/bin/systemctl'))
+            stack.enter_context(patch('install.wifi_interface', return_value='wlan0'))
+            stack.enter_context(patch('bridge.read_mac', return_value='02:12:34:56:78:90'))
+            stack.enter_context(patch('bridge.discovery_networks', return_value=['192.0.2.0/24']))
+            stack.enter_context(patch('install.install_bundled_sdk', return_value=target/'sdk'))
+            # The staged unit targets Linux even when this test runs on Windows.
+            stack.enter_context(patch('install.service_text', side_effect=lambda python, sdk, user:
+                                     service_text('/usr/bin/python3.10', '/opt/d1-classroom/sdk', user)))
+            run = stack.enter_context(patch('install.subprocess.run', side_effect=[
+                subprocess.CompletedProcess([], 3, stdout='inactive\n'),
+                subprocess.CompletedProcess([], 1, stdout='', stderr=''),
+            ]))
+            opener = stack.enter_context(patch('install.urllib.request.build_opener'))
+            stack.enter_context(patch('builtins.print'))
+            install.main()
+            self.assertTrue((target/'bridge.py').is_file())
+            self.assertTrue((target/'highlevel.py').is_file())
+            self.assertTrue(unit.is_file())
+            self.assertEqual([c.args[0][1] for c in run.call_args_list], ['is-active', 'list-unit-files'])
+            opener.assert_not_called()
+
+    def test_no_start_refuses_running_or_enabled_bridge(self):
+        with patch('install.subprocess.run', return_value=subprocess.CompletedProcess([], 0, stdout='active\n')):
+            with self.assertRaises(ValueError): install.require_inactive_service()
+        with patch('install.subprocess.run', side_effect=[
+            subprocess.CompletedProcess([], 3, stdout='inactive\n'),
+            subprocess.CompletedProcess([], 0, stdout='d1-classroom.service enabled enabled\n'),
+            subprocess.CompletedProcess([], 0, stdout='enabled\n'),
+        ]):
+            with self.assertRaises(ValueError): install.require_inactive_service()
 
 
 if __name__ == '__main__': unittest.main()

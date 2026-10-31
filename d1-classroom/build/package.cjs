@@ -2,9 +2,14 @@ const fs = require('node:fs'), path = require('node:path'), os = require('node:o
 const asar = require('@electron/asar');
 const root = path.resolve(__dirname, '..');
 const dest = path.resolve(root, '../output/D1彩色課程套件/學生工具/D1學生工坊');
+function requireX64(file) {
+  const data=fs.readFileSync(file), offset=data.readUInt32LE(0x3c);
+  if(data.toString('ascii',0,2)!=='MZ'||data.toString('ascii',offset,offset+4)!=='PE\0\0'||data.readUInt16LE(offset+4)!==0x8664)throw Error('Windows delivery requires an x64 binary: '+file);
+}
 (async () => {
-  fs.mkdirSync(dest, { recursive: true });
   const dist = path.dirname(require('electron'));
+  requireX64(path.join(dist,'electron.exe'));requireX64(require('ffmpeg-static'));
+  fs.mkdirSync(dest, { recursive: true });
   fs.cpSync(dist, dest, { recursive: true, filter: source => path.basename(source) !== 'electron.exe' });
   fs.copyFileSync(path.join(dist, 'electron.exe'), path.join(dest, 'D1學生工坊.exe'));
   const stage = fs.mkdtempSync(path.join(os.tmpdir(), 'd1-package-'));

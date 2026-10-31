@@ -4,13 +4,18 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const net = require('node:net');
+const dgram = require('node:dgram');
 const { spawn } = require('node:child_process');
 const { once } = require('node:events');
 const { scan } = require('../app/discovery.cjs');
 
 test('HTTP + UDP fake bridge: scan, ownership, malformed traffic, timeout, reconnect', { timeout: 15000 }, async t => {
-  const listener = net.createServer();listener.listen(0, '127.0.0.1');await once(listener, 'listening');
-  const port = listener.address().port;await new Promise(resolve => listener.close(resolve));
+  // TCP port 0 can select a Windows port that UDP is forbidden to bind.
+  const probe = dgram.createSocket('udp4');probe.bind(0, '127.0.0.1');await once(probe, 'listening');
+  const port = probe.address().port;
+  const listener = net.createServer();
+  try { listener.listen(port, '127.0.0.1');await once(listener, 'listening'); }
+  finally { await new Promise(resolve => probe.close(resolve));if(listener.listening)await new Promise(resolve => listener.close(resolve)); }
   const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'd1-protocol-'));
   const mac = '02:12:34:56:78:90';
   const config = path.join(temporary, 'robot.json');

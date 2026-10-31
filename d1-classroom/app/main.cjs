@@ -51,10 +51,11 @@ ipcMain.handle('disconnect',()=>disconnect());
 async function control(route,data={}){
  const s=session;if(!s)throw Error('請先連接本組機器狗');
  const result=await request(route,{...data,lease:s.lease},s.robot);
+ if(result.stop==='not_confirmed')throw Error(result.warning||'SDK 未確認停止，請按現場硬體停止方案處理');
  if(session!==s)throw Error('連線已中斷，請重新掃描');
  return result;
 }
-ipcMain.handle('begin',async()=>{const result=await control('/begin');executing=true;return result;});
+ipcMain.handle('begin',async(_,options={})=>{const result=await control('/begin',{allow_high_risk:options?.allow_high_risk===true,allow_backflip:options?.allow_backflip===true});executing=true;return result;});
 ipcMain.handle('command',(_,a,args)=>control('/command',validate(a,args)));
 ipcMain.handle('stop',async()=>{try{return await control('/stop');}finally{executing=false;}});
 ipcMain.handle('end',async()=>{try{return await control('/end');}finally{executing=false;}});

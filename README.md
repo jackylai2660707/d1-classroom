@@ -2,6 +2,10 @@
 
 **公司電腦繼續開發：先看 [跨電腦持續開發](docs/跨電腦持續開發.md)。實機部署按 [公司電腦實機測試](docs/公司電腦實機測試.md)。**
 
+新狗開發版初始化：雙擊根目錄「初始化新機器狗.cmd」，輸入當前 IP。先讓狗趴穩並斷開控制端；支援範圍、備份與失敗還原見 [一鍵初始化說明](docs/一鍵初始化機器狗.md)。不同韌體不會自動猜測修改，初始化不測動作。
+
+本機最新版成品為 2.1.0，根目錄「啟動學生工坊.cmd」可直接開啟，已包含擴充動作、感測資料及持續辨識。繼續改程式時用「啟動學生工坊開發版.cmd」，啟動時重新 bundle；不要同時開兩版連同一隻狗。2.1.0 的本機交付與驗證範圍見 [打包紀錄](docs/2.1.0打包紀錄.md)，舊 v2.0.0 下載清單保持原樣。
+
 私人倉庫：[jackylai2660707/d1-classroom](https://github.com/jackylai2660707/d1-classroom)。Git 保存可維護原始碼、完整原廠 SDK 與文檔；Windows 成品及大型參考資料放同一私人倉庫的 Release。
 
 開發版：clone 後在倉庫根目錄執行 `powershell -NoProfile -File scripts/setup-dev.ps1`，再進 `d1-classroom` 執行 `pnpm run dev`。可修改 UI、功能與橋接、連真機 debug，再以正常 Git 分支 commit / push；不需要使用預先打包的 EXE。

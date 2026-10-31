@@ -1,6 +1,6 @@
 {
   "name": "d1-classroom",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "description": "D1 初中學生編程工具",
   "main": "app/main.cjs",

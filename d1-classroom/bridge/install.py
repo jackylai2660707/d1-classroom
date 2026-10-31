@@ -16,6 +16,7 @@ import tempfile
 import zipfile
 
 ROOT = pathlib.Path('/opt/d1-classroom')
+UNIT = pathlib.Path('/etc/systemd/system/d1-classroom.service')
 NET = pathlib.Path('/sys/class/net')
 BUNDLE = pathlib.Path(__file__).resolve().parent/'sdk'
 
@@ -65,7 +66,32 @@ def write_binary_changed(path, source):
 
 def verify_sdk(directory):
     env = {**os.environ, 'PYTHONPATH': str(directory), 'LD_LIBRARY_PATH': f'{directory}:/opt/export/mc/bin'}
-    subprocess.run([sys.executable, '-c', 'import mc_sdk_zsl_1_py'], env=env, check=True, timeout=15)
+    # Inspect the class only: never construct or initialize a robot during this check.
+    probe = ('import mc_sdk_zsl_1_py as m; '
+             'required = ("initRobot", "checkConnect", "getBatteryPower", "move", "standUp", "lieDown"); '
+             'missing = [name for name in required if not callable(getattr(m.HighLevel, name, None))]; '
+             'assert not missing, "SDK missing methods: " + repr(missing)')
+    subprocess.run([sys.executable, '-c', probe], env=env, check=True, timeout=15)
+
+
+def require_inactive_service():
+    """Staging must not overwrite code that an active or enabled service could load."""
+    message = '只安裝模式需要橋接尚未啟用且未運行；未修改服務，請先核對現有部署'
+    active = subprocess.run(['systemctl', 'is-active', 'd1-classroom.service'],
+                            capture_output=True, text=True, check=False)
+    if active.stdout.strip() not in {'inactive', 'failed', 'unknown'}:
+        raise ValueError(message)
+    units = subprocess.run(['systemctl', 'list-unit-files', 'd1-classroom.service', '--no-legend', '--no-pager'],
+                           capture_output=True, text=True, check=False)
+    # systemd 249 returns 1 with empty output when there is no matching unit.
+    if units.returncode and not (units.returncode == 1 and not units.stdout.strip() and not units.stderr.strip()):
+        raise ValueError(message)
+    if not units.stdout.strip():
+        return
+    enabled = subprocess.run(['systemctl', 'is-enabled', 'd1-classroom.service'],
+                             capture_output=True, text=True, check=False)
+    if enabled.stdout.strip() != 'disabled':
+        raise ValueError(message)
 
 
 def install_bundled_sdk(bundle=BUNDLE):
@@ -155,6 +181,7 @@ def main():
     parser.add_argument('--sdk-dir', help='僅供技術人員覆寫；預設自動安裝隨包原廠 SDK')
     parser.add_argument('--sdk-address', help='SDK 的機內地址；auto 代表使用 Wi-Fi 當前地址')
     parser.add_argument('--user', default=os.environ.get('SUDO_USER') or 'root')
+    parser.add_argument('--no-start', action='store_true', help='只安裝檔案與檢查 SDK 介面，不初始化 SDK、不啟動或啟用服務')
     args = parser.parse_args()
     if sys.platform != 'linux' or os.geteuid() != 0:
         raise SystemExit('請在機器狗 Linux 上執行 sudo bash install.sh')
@@ -162,14 +189,17 @@ def main():
         raise SystemExit('隨附原廠 SDK 需要 CPython 3.10。例：sudo D1_PYTHON=/usr/bin/python3.10 bash install.sh')
     if not shutil.which('systemctl'):
         raise SystemExit('需要 systemd；未安裝服務')
+    if args.no_start:
+        require_inactive_service()
     import pwd
     pwd.getpwnam(args.user)
     old_path = ROOT/'robot.json'
     old = json.loads(old_path.read_text(encoding='utf-8-sig')) if old_path.exists() else {}
     interface = wifi_interface(args.interface or old.get('interface'))
-    from bridge import read_mac, interface_ip
+    from bridge import read_mac, discovery_networks
     mac = read_mac(interface)
-    interface_ip(interface)  # Require DHCP to have supplied an IPv4 address before claiming success.
+    if not discovery_networks(interface):
+        raise ValueError('設定的 Wi-Fi 或 ap0 尚無啟用中的 IPv4 網段')
     sdk = sdk_directory(args.sdk_dir) if args.sdk_dir else install_bundled_sdk()
     if args.sdk_dir:
         verify_sdk(sdk)
@@ -184,9 +214,14 @@ def main():
     # Resolve all prerequisites before replacing the installed application.
     source = pathlib.Path(__file__).resolve().parent/'bridge.py'
     write_changed(ROOT/'bridge.py', source.read_text(encoding='utf-8'))
+    write_changed(ROOT/'highlevel.py', (source.parent/'highlevel.py').read_text(encoding='utf-8'))
     write_changed(old_path, json.dumps(config, ensure_ascii=False, indent=2)+'\n')
-    write_changed(pathlib.Path('/etc/systemd/system/d1-classroom.service'), unit)
+    write_changed(UNIT, unit)
     write_changed(ROOT/'機身標籤.txt', f'機器狗 · {mac[-5:]}\nWi-Fi MAC: {mac}\n')
+    if args.no_start:
+        print('僅完成檔案安裝與 SDK 匯入／介面檢查。未初始化 SDK、未啟動或啟用橋接。\n'
+              '通訊配置與原廠部署許可尚需核對；這不是 SDK 連通或實機動作驗收。')
+        return
     subprocess.run(['systemctl', 'daemon-reload'], check=True)
     subprocess.run(['systemctl', 'enable', 'd1-classroom.service'], check=True)
     subprocess.run(['systemctl', 'restart', 'd1-classroom.service'], check=True)

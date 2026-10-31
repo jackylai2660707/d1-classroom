@@ -52,7 +52,7 @@ const { _electron } = require(process.env.D1_PLAYWRIGHT || 'playwright');
     log=await page.locator('#log').innerText();assert(log.includes('識別等待超時'));assert(!log.includes('練習 left'));assert(!log.includes('程式錯誤'));
     await page.locator('#camera-off').click();await page.evaluate(()=>clearInterval(window.__frameTimer));
     const qa=path.resolve(__dirname,'../build/qa/courseware');fs.mkdirSync(qa,{recursive:true});
-    fs.writeFileSync(path.join(qa,'app-report.json'),JSON.stringify({version:'2.0.0',practiceLessons:[...Array.from({length:14},(_,i)=>i+1),16],visionLesson15:['synthetic live confirmation','timeout without turn'],modelImport:true,imageInference:true,physicalRobot:false,physicalCamera:false},null,2));
+    fs.writeFileSync(path.join(qa,'app-report.json'),JSON.stringify({version:require('../package.json').version,practiceLessons:[...Array.from({length:14},(_,i)=>i+1),16],visionLesson15:['synthetic live confirmation','timeout without turn'],modelImport:true,imageInference:true,physicalRobot:false,physicalCamera:false},null,2));
     console.log('PASS: all 16 packaged lesson programs, model import, classification, synthetic live confirmation and timeout. No physical robot or camera.');
   } finally {
     await app.close();

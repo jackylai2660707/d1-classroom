@@ -57,7 +57,7 @@ def audit():
         project=json.loads((O/'配套檔案/課程專案'/(base+'.d1.json')).read_text(encoding='utf-8'))
         assert project['blocks']==l['blocks'] and project['python']==l['code']
         assert (O/'配套檔案/課程專案'/(base+'.py')).read_text(encoding='utf-8')==l['code']
-    result={'version':'2.0.0','files':len(rows),'manifest':'all hashes matched','fullZip':'all members matched manifest',
+    result={'version':json.loads((R/'package.json').read_text(encoding='utf-8'))['version'],'files':len(rows),'manifest':'all hashes matched','fullZip':'all members matched manifest',
             'setupZip':'CRC and byte-identical original SDK','sourceZip':'CRC and required rebuild assets',
             'curriculum':'16 JSON and 16 Python match canonical source','legacyOfficeFiles':0,'fullZipBytes':full.stat().st_size,
             'sdkSha256':sdk_manifest['sha256']}

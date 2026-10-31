@@ -18,4 +18,6 @@
 - 私人 GitHub 倉庫為 jackylai2660707/d1-classroom。Git 追蹤原始碼、bridge/sdk 與文檔；成品 / 大型歷史資料透過同倉庫私人 Release 交付，不用 Git LFS。
 - 公司接手先讀 docs/公司電腦實機測試.md。下載腳本 scripts/fetch-release.ps1 按 releases/v2.0.0.json 核對 SHA-256；現場記錄保存在忽略的 field-results/。
 - 跨電腦繼續開發先讀 docs/跨電腦持續開發.md。scripts/setup-dev.ps1 安裝鎖定的開發依賴；pnpm run dev / dev:debug 以目前原始碼啟動，不使用舊 Release EXE。
+- 開發電腦可使用 Windows 11 ARM64；正式 Windows 成品統一以 Intel / AMD x64 為目標，不支援 32 位元 x86 Windows。安裝及打包時必須使用 Windows x64 Electron 與 FFmpeg，不得因本機 Node.js 是 ARM64 就改成交付 ARM64。現有 setup-dev.ps1 / package.cjs 尚未自動固定目標架構；具體要求見 docs/跨電腦持續開發.md「Windows ARM 開發與 x64 交付」。
+- 不因開發電腦是 ARM64 就新增例行多架構驗證或要求使用者反覆換機測試；按修改範圍執行既有必要檢查。文檔中的 x64 交付要求不代表已完成 ARM 相容性或 x64 成品驗收，實機動作 / 停止 / 相機驗收仍按原有規範。
 - 不覆寫已發佈的 Release 標籤或 manifest；新成品需新版本與新清單。推送前執行 scripts/check_repository.py 及核心測試。

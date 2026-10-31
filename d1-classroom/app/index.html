@@ -2,6 +2,14 @@
 <header><div><strong>D1 學生工坊</strong><span>初中機器狗編程</span></div><div class="connect"><button id="scan" class="primary">掃描機器狗</button><button id="disconnect" disabled>斷開</button><span id="status">未連接</span><span id="battery">電量 —</span></div></header>
 <section id="devices" hidden aria-label="選擇自己的機器狗"><div class="device-heading"><h2>選擇自己的機器狗</h2><span id="scan-status" role="status"></span></div><p>核對機身標籤上的完整 MAC，再點「連線」。</p><div id="robot-list"></div></section>
 <nav><label><input type="checkbox" id="practice" checked> 練習模式</label><button id="run" class="primary">▶ 運行</button><button id="stop" class="danger">■ 停止</button><label>課程範例 <select id="lesson"></select></label><button id="load">載入</button><button id="tutorial">本課教程 ↗</button><button id="save">保存專案</button><button id="open">開啟專案</button></nav>
+<section id="action-library"><details id="action-guide"><summary>動作、感測資料與 Python 範例</summary>
+<p>新增動作尚未完成此台機器狗的現場驗收。先在練習模式核對程式，再由現場人員逐項測試。除阻尼與退出指令外，動作前先站立並保持靜止；每次程序最多 60 秒。</p>
+<div id="quick-examples" class="row"></div>
+<label class="risk-switch"><input type="checkbox" id="allow-high-risk">允許本次程序執行高風險動作</label>
+<p class="risk-note">跳躍、雙腿站立可能失衡、碰撞或夾傷，頻繁使用會增加關節磨損。需要平整空場地與現場硬體停止方案；軟體停止不能保證中止已開始的特技。</p>
+<details id="extreme-actions"><summary>危險指令：後空翻（預設隱藏）</summary><p class="risk-note">後空翻可能造成翻覆、重擊、人員受傷或設備損壞。請勿在桌面、靠近人員或障礙物的位置執行；場地須符合原廠要求。</p><label><input type="checkbox" id="show-backflip">顯示危險的後空翻指令</label><label class="risk-switch"><input type="checkbox" id="allow-backflip" disabled>另外允許本次程序執行後空翻</label></details>
+<div id="api-list"></div><p class="hint">插入範例只修改編輯區，不會自動執行。練習模式的感測數值是示意資料，不是真機讀值。</p>
+</details></section>
 <div id="notice" role="status">練習模式只記錄指令，不會讓機器狗運動。實機測試前請取得老師示意。</div>
 <main><section class="editor"><div class="sectionbar"><div class="modes"><button data-mode="blocks" class="active">積木</button><button data-mode="split">積木與 Python</button><button data-mode="python">Python</button></div><button id="generated">用積木更新 Python</button></div><div id="editors"><div id="blockly"></div><div id="textwrap"><label for="code">Python 程式 <span id="code-state">與積木一致</span></label><textarea id="code" spellcheck="false" aria-label="Python 程式"></textarea><small>文字可自行修改；修改後會保留原積木。按「用積木更新 Python」會覆蓋文字。</small></div></div></section>
 <aside><h2>相機與圖像分類</h2><div class="row"><button id="robot-camera">機器狗相機</button><button id="pc-camera">電腦相機</button><button id="camera-off">關閉</button></div><canvas id="camera" width="640" height="480"></canvas><video id="video" autoplay muted playsinline hidden></video><div id="camera-state">相機未開啟</div><div class="row"><button id="capture">保存圖片</button><label class="filebutton">開啟測試圖片<input type="file" id="image-input" accept="image/*"></label></div><label class="filebutton green">匯入 TensorFlow.js ZIP<input type="file" id="model-input" accept=".zip"></label><div id="model-state">尚未匯入模型</div><div id="predictions"></div><p class="hint">確認條件：同一類連續 3 張新畫面，信心分數 ≥ 0.80。靜態圖片只用於測試。</p></aside></main>

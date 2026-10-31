@@ -18,7 +18,7 @@ def run(strict_delivery=False):
     def check(name,passed,detail):
         checks.append({'name':name,'passed':bool(passed),'detail':detail})
     check('Python',sys.version_info>=(3,10),platform.python_version())
-    check('Windows x64',platform.system()=='Windows' and platform.machine().lower() in ('amd64','x86_64'),'{} {}'.format(platform.system(),platform.machine()))
+    check('Windows workstation',platform.system()=='Windows' and platform.machine().lower() in ('amd64','x86_64','arm64','aarch64'),'{} {}; delivery target remains Windows x64'.format(platform.system(),platform.machine()))
     sdk=ROOT/'d1-classroom/bridge/sdk'
     try:
         manifest=json.loads((sdk/'manifest.json').read_text(encoding='utf-8'))

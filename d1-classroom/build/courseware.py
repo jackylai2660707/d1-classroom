@@ -8,7 +8,7 @@ R = Path(__file__).resolve().parents[1]
 OUT = R.parent / 'output' / 'D1彩色課程套件'
 SITE = OUT / '教程'
 LESSONS = json.loads((R / 'curriculum/lessons.json').read_text(encoding='utf-8'))
-VERSION = '2.0.0'
+VERSION = json.loads((R/'package.json').read_text(encoding='utf-8'))['version']
 GROUPS = [('01—05', '從認識到控制', '先學停止與連線，再研究順序、時間和方向。', range(1, 6)),
           ('06—10', '把想法寫成程式', '用重複、變數與條件，走向可閱讀的 Python。', range(6, 11)),
           ('11—15', '讓機器狗看見', '採集、訓練、測試，再讓可靠的條件觸發短動作。', range(11, 16)),
@@ -172,7 +172,7 @@ def deploy_page():
 
 def about_page():
     return guide('版本與資料來源', '清楚區分已完成的軟體檢查與仍需現場完成的工作。', [
-        ('version','這份交付包含什麼','<p>2.0.0 / 2026-10-21：16 課離線網頁教程、三份列印文件、Windows x64 學生工坊、32 份起步 JSON / Python、三類示例圖片、備用模型、自帶原廠 SDK 的初始化包與原始碼。</p><p>本版全面採用 MAC 掃描連線。舊版 Word / PPT 與教材 PDF 已移到工作區的 references/歷史教材，不混入正式交付。</p>'),
+        ('version','這份交付包含什麼',f'<p>{VERSION} / 2026-10-31：16 課離線網頁教程、三份列印文件、Windows x64 學生工坊、32 份起步 JSON / Python、三類示例圖片、備用模型、自帶原廠 SDK 的初始化包與原始碼。</p><p>本版全面採用 MAC 掃描連線。舊版 Word / PPT 與教材 PDF 已移到工作區的 references/歷史教材，不混入正式交付。</p>'),
         ('scope','驗收範圍','<p>本機驗證涵蓋課件導覽、離線檔案與下載、記錄匯入匯出、不同寬度排版、列印 PDF，以及學生工坊的練習、模型匯入與假 SDK 通訊流程。詳細結果見套件根目錄的驗收狀態.md。</p><p>沒有連接實體狗。本機測試與假 SDK 不能代替機身初始化、真實動作、停止延遲、相機與整班網路負載驗收。</p>'),
         ('sources','圖片、程式與外部工具','<ul><li>產品圖與機身示意：智元 D1 Edu 原廠產品資料；原圖保留來源權利。</li><li>積木、編輯器與模型畫面：配套學生工坊實際截圖。掃描畫面為假 SDK 範例，模型畫面的分數來自備用示例模型。</li><li>圖像訓練：'+link('https://teachablemachine.withgoogle.com/','Google Teachable Machine',target='_blank',rel='noopener')+'。網站入口於 2026-10-20 核對；操作圖片為先前核對的參考介面，網站可能更新。</li><li>模型介面參考：'+link('https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image','Google Creative Lab 官方圖像模型函式庫',target='_blank',rel='noopener')+'。學生工坊使用標準 224 × 224 彩色圖像模型與完整 TensorFlow.js ZIP。</li><li>原廠 SDK 原包、雜湊與 BSD 授權：技術人員部署/d1-setup.zip 裡的 sdk/。</li><li>工具第三方授權：學生工具/D1學生工坊/THIRD-PARTY-NOTICES.txt 及附帶授權檔。</li></ul>'),
         ('maintain','後續如何修改','<p>課程內容的唯一來源是原始碼裡的 curriculum/lessons.json。網頁、工作紙和教師資料都從它產生，版式在 courseware/，生成入口在 build/courseware.py 與 build/printables.py。</p><p>修改程式後先 bundle、package，再用 build/deliver.py 重建交付 ZIP 與 SHA-256。原始碼使用說明在技術人員部署目錄，完整原始碼 ZIP 位於套件根目錄。</p>')])

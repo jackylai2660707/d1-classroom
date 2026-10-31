@@ -65,6 +65,10 @@ def main():
     report=workspace_report if workspace_report.is_file() else R/'courseware/驗收紀錄.md'
     if workspace_report.is_file():copy(workspace_report,R/'courseware/驗收紀錄.md')
     for source,destination in [
+        (R.parent/'docs/學生工坊擴充指令.md',O/'學生工坊擴充指令.md'),
+        (R.parent/'docs/2.1.0打包紀錄.md',O/'2.1.0打包紀錄.md'),
+        (R.parent/'docs/一鍵初始化機器狗.md',O/'技術人員部署/一鍵初始化機器狗.md'),
+        (R.parent/'docs/橋接首次連線準備.md',O/'技術人員部署/橋接首次連線準備.md'),
         (R/'技術部署與實機驗收.md',O/'技術人員部署/技術部署與實機驗收.md'),
         (R/'README.md',O/'技術人員部署/原始碼使用說明.md'),
         (R/'連線使用說明.md',O/'連線使用說明.md'),
@@ -72,11 +76,23 @@ def main():
         (sdk/'LICENSE.vendor.txt',O/'技術人員部署/原廠SDK授權.txt'),
         (report,O/'驗收狀態.md')]:
         copy(source,destination)
+    # Preserve the PC initializer's workspace-relative layout in a self-contained folder.
+    initializer=O/'技術人員部署/一鍵初始化'
+    for name in ['initialize-robot.py','initialize-robot.cmd']:
+        copy(R.parent/'scripts'/name,initializer/'scripts'/name)
+    copy(R.parent/'初始化新機器狗.cmd',initializer/'初始化新機器狗.cmd')
+    for name in ['install.sh','install.py','bridge.py','highlevel.py','provision.py']:
+        copy(R/'bridge'/name,initializer/'d1-classroom/bridge'/name)
+    for file in sorted(sdk.iterdir()):
+        if file.is_file():copy(file,initializer/'d1-classroom/bridge/sdk'/file.name)
+    copy(R/'LICENSE',initializer/'d1-classroom/LICENSE')
     (O/'先讀我.md').write_text(f'''# D1 機器狗實驗室 {VERSION}
 
 完整解壓後，雙擊「使用說明.html」進入課程首頁。
 
 - 學生：雙擊「啟動學生工坊.cmd」，先練習，再按 MAC 掃描連線。工具內「本課教程」可開啟對應課程。
+- 新功能：上方可展開動作與 Python 範例；見「學生工坊擴充指令.md」。後空翻預設隱藏，所有高風險動作須逐次明確允許，尚未完成新動作實機驗收。
+- 新狗：技術人員部署/一鍵初始化/初始化新機器狗.cmd，輸入 IP；先閱讀同目錄上層的初始化說明。只自動處理已驗證韌體，不新增開機自啟，不測動作。
 - 教師：首頁的「教師帶課」包含節奏、分工、輪次、評量與備案。
 - 技術人員：首頁的「設備部署」提供同一初始化命令；技術人員部署/d1-setup.zip 已含原廠 SDK。
 - 列印：列印資料/ 內有 16 頁工作紙、18 頁教師手冊、5 頁操作、試教與色卡。
@@ -102,7 +118,7 @@ def main():
   檔案清單.csv               檔案大小與 SHA-256
 ''',encoding='utf-8')
     setup=O.parent/'D1機器狗初始化包.zip'
-    setup_entries=[(R/'bridge'/name,'d1-setup/'+name) for name in ['bridge.py','install.py','install.sh']]
+    setup_entries=[(R/'bridge'/name,'d1-setup/'+name) for name in ['bridge.py','highlevel.py','provision.py','install.py','install.sh']]
     setup_entries += [(p,'d1-setup/sdk/'+p.name) for p in sorted(sdk.iterdir()) if p.is_file()]
     setup_entries += [(R/'技術部署與實機驗收.md','d1-setup/'+name) for name in ['README.md','README.txt']]
     setup_entries += [(R/'LICENSE','d1-setup/LICENSE')]
@@ -110,6 +126,11 @@ def main():
     source=O/'D1學生工坊與教材原始碼.zip'
     entries=[(p,'d1-classroom/'+p.relative_to(R).as_posix()) for p in source_files()]
     entries.append((O/'學生工具/D1學生工坊/THIRD-PARTY-NOTICES.txt','d1-classroom/THIRD-PARTY-NOTICES.txt'))
+    for name in ['initialize-robot.py','initialize-robot.cmd']:
+        entries.append((R.parent/'scripts'/name,'scripts/'+name))
+    for name in ['一鍵初始化機器狗.md','學生工坊擴充指令.md','橋接首次連線準備.md']:
+        entries.append((R.parent/'docs'/name,'docs/'+name))
+    entries.append((R.parent/'初始化新機器狗.cmd','初始化新機器狗.cmd'))
     write_zip(source,entries)
     manifest_path=O/'檔案清單.csv'
     files=sorted(p for p in O.rglob('*') if p.is_file() and p!=manifest_path)

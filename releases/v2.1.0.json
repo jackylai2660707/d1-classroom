@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "repository": "jackylai2660707/d1-classroom",
+  "tag": "v2.1.0",
+  "version": "2.1.0",
+  "preparedDate": "2026-10-31",
+  "assets": [
+    {
+      "role": "classroom",
+      "name": "D1-Classroom-2.1.0-Windows-x64.zip",
+      "bytes": 258538514,
+      "sha256": "8429027ffc11098fe35adb63ed57a9fea5f3c069761f7e1a71129e8a17ea65e1"
+    },
+    {
+      "role": "setup",
+      "name": "D1-Robot-Setup-2.1.0.zip",
+      "bytes": 33014005,
+      "sha256": "735cfa645e7315dafb56d82b1eed9e74e162e36cc3cd652d65029dbe5518de4f"
+    }
+  ]
+}
